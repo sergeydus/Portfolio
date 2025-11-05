@@ -1,9 +1,63 @@
 import Image from "next/image";
-
+import RedirectIcons from "./components/server/RedirectIcons";
+import RedirectIcons2 from "./components/server/RedirectIcons2";
+import Facebook from "./components/svgs/Facebook";
+import Github from "./components/svgs/Github";
+import Linkedin from "./components/svgs/Linkedin";
+import Person from "./components/svgs/Person";
+import { motion } from "motion/react"
+import NavItem from "./components/nav/NavItem";
+import Contact from "./components/Contact";
+import Welcome from "./components/Welcome";
+import About from "./components/About";
+import Project from "./components/Project";
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="flex flex-col min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <div className="h-4 w-full bg-primary absolute top-0" />
+      <main className="flex flex-col min-h-screen w-full items-center justify-between px-[20%] pb-8 bg-white dark:bg-black sm:items-start">
+        <Welcome />
+        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left w-full">
+          <ul className="flex flex-row gap-2">
+            
+            {/* <NavItem href="#about">About Me</NavItem>
+            <NavItem>Experience</NavItem>
+            <NavItem>Project</NavItem> */}
+
+            {/* <li className="mb-4">
+              <a
+                href="#"
+                className="text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50"
+              >
+                About Me
+              </a>
+            </li>
+            <li className="mb-4">
+              <a
+                href="#"
+                className="text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50"
+              >
+                Experience
+              </a>
+            </li>
+            <li className="mb-4">
+              <a
+                href="#"
+                className="text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50"
+              >
+                Projects
+              </a>
+            </li> */}
+          </ul>
+          <About />
+          <Project />
+          <Contact />
+          {/* <div className="h-96">y</div>
+          <div className="h-96">y</div>
+          <div className="h-96">y</div> */}
+        </div>
+      </main >
+      {/* <main className="flex min-h-screen w-full mx-64 flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -59,7 +113,7 @@ export default function Home() {
             Documentation
           </a>
         </div>
-      </main>
-    </div>
+      </main> */}
+    </div >
   );
 }
