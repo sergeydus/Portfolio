@@ -1,6 +1,5 @@
-import * as React from "react"
-import { motion, SVGMotionProps } from "motion/react"
-import tailwindConfig from '../../../tailwind.config.js'; // Adjust path as needed
+import { SVGMotionProps } from "motion/react"
+import * as motion from "motion/react-client"
 
 const SvgComponent: React.FC<SVGMotionProps<SVGSVGElement>> = (props) => (
     <motion.svg xmlns="http://www.w3.org/2000/svg"
