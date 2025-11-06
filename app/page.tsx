@@ -6,7 +6,9 @@ import Project from "./components/Project";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <div className="h-4 w-full bg-primary absolute top-0" />
+      <div className="h-4 w-full bg-primary absolute top-0 overflow-hidden text-transparent">
+        {process.env.NODE_ENV}
+      </div>
       <main className="flex flex-col min-h-screen w-full items-center justify-between px-[20%] pb-8 bg-white dark:bg-black sm:items-start">
         <Welcome>
           <p className='mb-4'>
