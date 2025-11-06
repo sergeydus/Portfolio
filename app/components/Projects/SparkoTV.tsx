@@ -40,6 +40,11 @@ const SparkoTV: React.FC<{ title: string, children: ReactNode }> = ({ children, 
                 <motion.div transition={{ duration: 2, delay: 2 }} animate={{ opacity: isTvInView ? 1 : 0 }} initial={{ opacity: 0 }} className="flex flex-col gap-2 p-4 text-lg">
                     {children}
                 </motion.div>
+                <div >
+                    env:{process.env.NODE_ENV}
+                    <br></br>
+                    baseurl: {baseURL}
+                </div>
             </motion.div>
 
         </motion.div>
