@@ -4,6 +4,8 @@ import React from 'react';
 import * as motion from "motion/react-client"
 import SparkoTV from './Projects/SparkoTV';
 import { getBasePath } from '../utils';
+import Supplant_APP_Image from '../../public/supplant_app.webp';
+import Mekome_1_Image from '../../public/mekome_1.png';
 
 const Project: React.FC = () => {
     const baseURL = getBasePath()
@@ -11,7 +13,7 @@ const Project: React.FC = () => {
         <motion.div className='flex flex-col gap-4'>
             <motion.div className="text-4xl font-bold" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} >Projects I've worked on:</motion.div>
             <motion.div initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ delay: 1, duration: 2 }} viewport={{ once: true }} className="flex bg-background/50 dark:bg-white/5 rounded-lg w-full  overflow-hidden">
-                <Image src={`${baseURL}/supplant_app.webp`} alt="Supplant app image" width={230} height={498}></Image>
+                <Image src={Supplant_APP_Image} alt="Supplant app image" width={230} height={498}></Image>
                 <div className="flex flex-col gap-2 p-4 text-lg text-white">
                     <div className="underline font-bold text-[#3dac77]">Supplant</div>
                     <p>
@@ -44,7 +46,7 @@ const Project: React.FC = () => {
                         With its intuitive design and modular features, Mekome empowers residents to stay informed, engaged, and connected with their local environment.
                     </p>
                 </div>
-                <Image className="rounded-t-3xl" src={`${baseURL}/mekome_1.png`} alt="Supplant app image" width={200} height={429}></Image>
+                <Image className="rounded-t-3xl" src={Mekome_1_Image} alt="Supplant app image" width={200} height={429}></Image>
 
             </motion.div>
             <SparkoTV title="Sparko TV – A Virtual Retirement App">
