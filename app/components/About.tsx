@@ -19,10 +19,10 @@ const About: React.FC = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="flex flex-row pe-32 text-lg bg-black/30 dark:bg-white/5 rounded-lg py-8"
+                className="flex flex-row pe-32 text-lg bg-background/70 dark:bg-white/5 rounded-lg py-8"
             >
                 <div className="flex items-start justify-center px-8">
-                    <Person height={128} width={128} className="text-white fill-current" />
+                    <Person height={128} width={128} className="text-primary dark:text-white fill-current" />
                 </div>
                 <div>
                     <div className="text-4xl mb-8 text-primary underline">Sergey Dushevski</div>
