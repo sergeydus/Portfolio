@@ -1,9 +1,12 @@
 module.exports = {
     theme: {
+        darkmode: 'class',
         extend: {
             colors: {
-                primary:'#ff6900',
-                secondary:'var(--color-cyan-500)',
+                primary: 'var(--color-primary)', // Use the CSS variable,
+                secondary: 'var(--color-cyan-500)',
+                text: 'var(--color-text-primary)',
+                rootBackground: 'var(--root-background)',
                 // orange: {
                 //     50:  '#fff7ed',
                 //     100: '#ffedd5',

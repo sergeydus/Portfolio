@@ -11,7 +11,7 @@ const SvgComponent: React.FC<SVGMotionProps<SVGSVGElement>> = (props) => (
         className="text-primary fill-current bg-primary rounded"
     >
         <path
-            stroke="#000000"
+            stroke="var(--root-background)"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2.5}

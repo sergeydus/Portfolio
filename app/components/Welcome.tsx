@@ -15,8 +15,8 @@ const Welcome: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <motion.div className="text-3xl flex-1 flex flex-col items-center justify-center">
                 <motion.div
                     animate={{
-                        background: 'white',
-                        maskImage: ['linear-gradient(#ffffff -20%,transparent 0%, transparent 100%)', 'linear-gradient(#ffffff 100%,transparent 120%, transparent 100%)']
+                        background: 'var(--color-text-primary',
+                        maskImage: ['linear-gradient(var(--color-text-primary) -20%,transparent 0%, transparent 100%)', 'linear-gradient(var(--color-text-primary) 100%,transparent 120%, transparent 100%)']
                     }}
                     transition={{ duration: 5, ease: "easeInOut" }}
                     viewport={{ once: true }} className="text-4xl image relative font-bold mb-4 text-center [-webkit-text-fill-color:transparent] bg-clip-text!"

@@ -2,8 +2,11 @@
 @config "../tailwind.config.js"; /* Adjust path as needed */
 
 :root {
-  --background: #ffffff;
+  --root-background: #ffd7a8;
+  --background: #ffebd3;
   --foreground: #171717;
+  --color-primary: #4b8b74;
+  --color-text-primary: #000000;
 }
 
 @theme inline {
@@ -15,8 +18,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --root-background: #000000;
     --background: #0a0a0a;
     --foreground: #ededed;
+    --color-primary: #ff6900;
+    --color-text-primary: #ffffff;
   }
 }
 

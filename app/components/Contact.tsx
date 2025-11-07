@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
                     <Facebook height={32} width={32} className="text-primary fill-current" />
                 </RedirectIcons2>
                 <RedirectIcons2 title="Mail" url="mailto:sergeydushevski@gmail.com">
-                    <Mail height={32} width={32} className="text-black fill-current" />
+                    <Mail height={32} width={32} className="bg-background fill-current" />
                 </RedirectIcons2>
             </div>
         </motion.div>

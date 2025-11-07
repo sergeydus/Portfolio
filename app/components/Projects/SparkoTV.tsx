@@ -2,18 +2,18 @@
 import Image from 'next/image';
 import React, { ReactNode } from 'react';
 import { motion, useInView } from "motion/react"
-import { getBasePath } from '@/app/utils';
 import TV1_Image from '../../../public/TV1.svg';
 import TV2_Image from '../../../public/TV2.svg';
 
 const SparkoTV: React.FC<{ title: string, children: ReactNode }> = ({ children, title }) => {
     const tvRef = React.useRef(null);
     const isTvInView = useInView(tvRef, { once: true });
-    const baseURL = getBasePath()
+
     return (
         <motion.div
+            initial={{ background: 'rgb(from var(--background) r g b / 0)' }}
             transition={{ duration: 2, delay: 2 }}
-            animate={{ background: isTvInView ? '#0d0d0d' : '#0000000' }}
+            animate={{ background: isTvInView ? 'rgb(from var(--background) r g b / 1)' : 'rgb(from var(--background) r g b / 0)' }}
             className="flex rounded-lg w-full overflow-hidden">
             <motion.div
                 transition={{ duration: 2, delay: 2 }}
@@ -38,7 +38,7 @@ const SparkoTV: React.FC<{ title: string, children: ReactNode }> = ({ children, 
                         <Image src={TV2_Image} alt="Supplant TV App Image" style={{ width: '400px', height: 'auto' }} width={0} height={0}></Image>
                     </motion.div>
                 </div>
-                <motion.div transition={{ duration: 2, delay: 2 }} animate={{ opacity: isTvInView ? 1 : 0 }} initial={{ opacity: 0 }} className="flex flex-col gap-2 p-4 text-lg">
+                <motion.div transition={{ duration: 2, delay: 2 }} animate={{ opacity: isTvInView ? 1 : 0 }} initial={{ opacity: 0 }} className="flex flex-col gap-2 p-4 text-lg text-black dark:text-white">
                     {children}
                 </motion.div>
             </motion.div>
