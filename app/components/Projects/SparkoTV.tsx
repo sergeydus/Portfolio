@@ -35,11 +35,11 @@ const SparkoTV: React.FC<{ title: string, children: ReactNode }> = ({ children, 
                         className='flex absolute z-20 top-0 w-full items-center justify-center'
                     >
                         <div className='aspect-1920/1080 w-full lg:w-[480px] lg:h-[270px] flex items-center justify-center relative'>
-                            <Image src={TV1_Image} alt="Supplant TV App Image" fill></Image>
+                            <Image src={TV1_Image} alt="Supplant TV App Image" fill priority></Image>
                         </div>
                     </motion.div>
                     <div className='aspect-1920/1080 w-full h-auto lg:w-[480px] lg:h-[270px] flex items-center justify-center relative'>
-                        <Image src={TV2_Image} alt="Supplant TV App Image" fill></Image>
+                        <Image src={TV2_Image} alt="Supplant TV App Image" fill priority></Image>
                     </div>
                 </div>
                 <motion.div transition={{ duration: 2, delay: 2 }} animate={{ opacity: isTvInView ? 1 : 0 }} initial={{ opacity: 0 }} className="flex flex-col gap-2 p-4 text-lg text-black dark:text-white">

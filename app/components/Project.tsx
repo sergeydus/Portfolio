@@ -12,14 +12,14 @@ const Project: React.FC = () => {
                 Projects I&apos;ve worked on:
             </motion.div>
             <motion.div
-                 initial={{ transform: "translateX(-100px)", opacity: 0 }}
+                initial={{ transform: "translateX(-100px)", opacity: 0 }}
                 whileInView={{ transform: "translateX(0)", opacity: 1 }}
                 transition={{ delay: 1, duration: 2 }}
                 viewport={{ once: true }}
                 className="flex flex-col lg:flex-row items-center justify-center lg:items-start bg-background dark:bg-white/5 rounded-lg w-full overflow-hidden"
             >
                 <div className="w-[230px] h-[498px] aspect-249/115 relative">
-                    <Image src={Supplant_APP_Image} alt="Supplant app image" fill></Image>
+                    <Image src={Supplant_APP_Image} alt="Supplant app image" fill priority></Image>
                 </div>
                 <div className="flex flex-col gap-2 p-4 text-lg text-black dark:text-white">
                     <div className="underline font-bold text-[#3dac77]">Supplant</div>
@@ -58,8 +58,14 @@ const Project: React.FC = () => {
                         With its intuitive design and modular features, Mekome empowers residents to stay informed, engaged, and connected with their local environment.
                     </p>
                 </div>
-                <Image className="rounded-t-3xl mt-0 me-0 lg:mt-8 lg:me-8" src={Mekome_1_Image} alt="Supplant app image" width={200} height={429}></Image>
-
+                <Image
+                    className="rounded-t-3xl mt-0 me-0 lg:mt-8 lg:me-8"
+                    src={Mekome_1_Image}
+                    alt="Supplant app image"
+                    width={200}
+                    height={429}
+                    priority>
+                </Image>
             </motion.div>
             <SparkoTV title="Sparko TV – A Virtual Retirement App">
                 <p>
