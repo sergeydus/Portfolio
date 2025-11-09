@@ -1,27 +1,27 @@
 import React from 'react'
 import Person from './svgs/Person'
 import * as motion from "motion/react-client"
-import clsx from 'clsx'
+import { cn } from '../utils'
 
 interface BrProps {
     className?: string
 }
 
 const Br: React.FC = ({ className = "" }: BrProps) => (
-    <span className={clsx`my-2 block ${className}`} />
+    <span className={cn`my-2 block ${className}`} />
 )
 
 const About: React.FC = () => {
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center w-full" id="about">
+        <div className="min-h-screen flex flex-col items-center justify-center w-full">
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="flex flex-row justify-center items-center pe-0 lg:pe-32 text-lg bg-background/70 dark:bg-white/5 rounded-lg py-8"
+                className="flex flex-row px-8 text-lg bg-background/70 dark:bg-white/5 rounded-lg py-8"
             >
-                <div className="hidden lg:flex items-start justify-center px-8">
+                <div className="hidden lg:flex items-start justify-center pe-8">
                     <Person height={128} width={128} className="text-primary dark:text-white fill-current" />
                 </div>
                 <div>
