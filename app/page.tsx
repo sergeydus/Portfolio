@@ -9,7 +9,7 @@ export default function Home() {
       <div className="h-4 w-full bg-primary absolute top-0 overflow-hidden text-transparent">
         {process.env.NODE_ENV}
       </div>
-      <main className="flex flex-col min-h-screen w-full items-center justify-between px-[5%] lg:px-[20%] pb-8 bg-orange-200 dark:bg-black sm:items-start text-black dark:text-white">
+      <main className="flex flex-col min-h-screen w-full items-center justify-between px-[5%] lg:px-[20%] pb-8 bg-orange-200 dark:bg-black sm:items-start text-black dark:text-white overflow-x-hidden">
         <Welcome className="text-xl lg:text-4xl">
           <p className='mb-4'>
             Greetings, I&apos;m Sergey Dushevski

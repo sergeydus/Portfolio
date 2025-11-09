@@ -59,7 +59,7 @@ const Project: React.FC = () => {
                     </p>
                 </div>
                 <Image
-                    className="rounded-t-3xl mt-0 me-0 lg:mt-8 lg:me-8"
+                    className="rounded-t-3xl mt-4 me-0 lg:mt-8 lg:me-8"
                     src={Mekome_1_Image}
                     alt="Supplant app image"
                     width={200}
