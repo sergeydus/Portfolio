@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-// import { motion, useInView } from "motion/react"
 import * as motion from "motion/react-client"
 import SparkoTV from './Projects/SparkoTV';
 import Supplant_APP_Image from '../../public/supplant_app.webp';
@@ -8,10 +7,20 @@ import Mekome_1_Image from '../../public/mekome_1.png';
 
 const Project: React.FC = () => {
     return (
-        <motion.div className='flex flex-col gap-4'>
-            <motion.div className="text-4xl font-bold" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} >Projects I've worked on:</motion.div>
-            <motion.div initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ delay: 1, duration: 2 }} viewport={{ once: true }} className="flex bg-background dark:bg-white/5 rounded-lg w-full  overflow-hidden">
-                <Image src={Supplant_APP_Image} alt="Supplant app image" width={230} height={498}></Image>
+        <motion.div className='flex flex-col gap-4 w-full'>
+            <motion.div className="text-2xl lg:text-4xl font-bold" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+                Projects I&apos;ve worked on:
+            </motion.div>
+            <motion.div
+                 initial={{ transform: "translateX(-100px)", opacity: 0 }}
+                whileInView={{ transform: "translateX(0)", opacity: 1 }}
+                transition={{ delay: 1, duration: 2 }}
+                viewport={{ once: true }}
+                className="flex flex-col lg:flex-row items-center justify-center lg:items-start bg-background dark:bg-white/5 rounded-lg w-full overflow-hidden"
+            >
+                <div className="w-[230px] h-[498px] aspect-249/115 relative">
+                    <Image src={Supplant_APP_Image} alt="Supplant app image" fill></Image>
+                </div>
                 <div className="flex flex-col gap-2 p-4 text-lg text-black dark:text-white">
                     <div className="underline font-bold text-[#3dac77]">Supplant</div>
                     <p>
@@ -28,9 +37,14 @@ const Project: React.FC = () => {
                     </p>
                 </div>
             </motion.div>
-            <motion.div initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ delay: 1, duration: 2 }} viewport={{ once: true }} className="flex bg-background dark:bg-white/5 pt-8 px-8 rounded-lg w-full overflow-hidden">
-                <div className="flex flex-col gap-2 p-4 text-lg text-black dark:text-white">
-                    <div className="flex underline font-bold text-[#6c5a90] ">Mekome</div>
+            <motion.div
+                initial={{ transform: "translateX(100px)", opacity: 0 }}
+                whileInView={{ transform: "translateX(0)", opacity: 1 }}
+                transition={{ delay: 1, duration: 2 }}
+                viewport={{ once: true }}
+                className="flex flex-col-reverse items-center lg:items-start lg:flex-row bg-background dark:bg-white/5 rounded-lg w-full overflow-hidden">
+                <div className="flex items-center lg:items-start flex-col gap-2 text-lg p-8 text-black dark:text-white">
+                    <div className="flex underline font-bold text-[#6c5a90]">Mekome</div>
                     <p>
                         The Mekome app is a community-focused communication platform designed to streamline local interactions between municipalities and residents.
                     </p>
@@ -44,7 +58,7 @@ const Project: React.FC = () => {
                         With its intuitive design and modular features, Mekome empowers residents to stay informed, engaged, and connected with their local environment.
                     </p>
                 </div>
-                <Image className="rounded-t-3xl" src={Mekome_1_Image} alt="Supplant app image" width={200} height={429}></Image>
+                <Image className="rounded-t-3xl mt-0 me-0 lg:mt-8 lg:me-8" src={Mekome_1_Image} alt="Supplant app image" width={200} height={429}></Image>
 
             </motion.div>
             <SparkoTV title="Sparko TV – A Virtual Retirement App">

@@ -1,8 +1,9 @@
 "use client"
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from "motion/react"
+import { cn } from '../utils'
 
-const Welcome: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const Welcome: React.FC<{ children: React.ReactNode, className?: string }> = ({ children, className }) => {
     const carouselRef = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
         target: carouselRef,
@@ -11,15 +12,15 @@ const Welcome: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const visibility = useTransform(fixedScroll, [0, 1], ['hidden', 'visible'])
 
     return (
-        <div className="flex bg-red flex-col min-h-screen w-full items-center justify-center mb-4">
-            <motion.div className="text-3xl flex-1 flex flex-col items-center justify-center">
+        <div className={cn("flex bg-red flex-col min-h-screen w-full items-center justify-center mb-4", className)}>
+            <motion.div className="flex-1 flex flex-col items-center justify-center">
                 <motion.div
                     animate={{
                         background: 'var(--color-text-primary',
                         maskImage: ['linear-gradient(var(--color-text-primary) -20%,transparent 0%, transparent 100%)', 'linear-gradient(var(--color-text-primary) 100%,transparent 120%, transparent 100%)']
                     }}
                     transition={{ duration: 5, ease: "easeInOut" }}
-                    viewport={{ once: true }} className="text-4xl image relative font-bold mb-4 text-center [-webkit-text-fill-color:transparent] bg-clip-text!"
+                    viewport={{ once: true }} className=" image relative font-bold mb-4 text-center [-webkit-text-fill-color:transparent] bg-clip-text!"
                 >
                     {children}
                 </motion.div>
